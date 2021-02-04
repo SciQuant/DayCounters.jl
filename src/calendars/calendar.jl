@@ -190,17 +190,17 @@ end
 """
     advance(dt::Date, step::DatePeriod, calendar::BusinessCalendar, [convention::BusinessDayConvention = Following()])
 
-Advances the given `date`, `step` number of days and returns the result. `step` can be
-either a [`DatePeriod`](@ref) or a [`BusinessDatePeriod`](@ref). In the first case, the date
-advances using calendar days and if it falls in a holiday (i.e., a non business day), it is
-adjusted using the `convention`. On the second case, the date advances using business days,
-so it is expected that `step` can be converted to [`BusinessDay`](@ref). It is important to
-note that if the provided step is either `0 days` or `0 businessdays` and `dt` is a holiday,
-it will be adjusted using the `convention`.
+Advances the given date `dt`, `step` number of days and returns the result. `step` can be
+either a [`DatePeriod`](@ref) or a [`BusinessDatePeriod`](@ref). In the first case,
+the date advances using calendar days and if it falls in a holiday (i.e., a non business
+day), it is adjusted using the `convention`. On the second case, the date advances using
+business days, so it is expected that `step` can be converted to [`BusinessDay`](@ref). It
+is important to note that if the provided step is either `0 days` or `0 businessdays` and
+`dt` is a holiday, it will be adjusted using the `convention`.
 
-```jldoctest
+```jldoctest; setup = :(using DayCounters; using Dates)
 julia> dt = Date(2001, 12, 26)
-2001-12-04
+2001-12-26
 
 julia> advance(dt, Day(4), ArgentinaCalendar())
 2002-01-02

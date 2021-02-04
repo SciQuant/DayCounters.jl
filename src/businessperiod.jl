@@ -27,7 +27,7 @@ for period in (:BusinessYear, :BusinessMonth, :BusinessWeek, :BusinessDay)
             $($period_str)(v)
 
         Construct a `$($period_str)` object with the given `v` value. Input must be
-        losslessly convertible to an [`Int64`](@ref).
+        losslessly convertible to an `Int64`.
         """ $period(v)
     end
 end

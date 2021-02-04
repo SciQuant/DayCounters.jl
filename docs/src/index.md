@@ -1,5 +1,8 @@
 ```@meta
-CurrentModule = DayCounters
+DocTestSetup = quote
+    using DayCounters
+    using Dates
+end
 ```
 
 # DayCounters
