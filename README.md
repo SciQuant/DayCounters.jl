@@ -1,14 +1,12 @@
 # DayCounters
 
-[![Build Status](https://github.com/SciQuant/DayCounters.jl/workflows/CI/badge.svg)](https://github.com/SciQuant/DayCounters.jl/actions)
-
 | **Documentation** |
 |:------------ |
 | [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://SciQuant.github.io/DayCounters.jl/stable/) [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://SciQuant.github.io/DayCounters.jl/dev/) |
 |**Build Status** |
 | [![Build Status](https://github.com/SciQuant/DayCounters.jl/workflows/CI/badge.svg)](https://github.com/SciQuant/DayCounters.jl/actions) |
 
-**DayCounters** provides several day count conventions and year fractions methods which allows moving from dates intervals to real numbers.
+**DayCounters** provides several day count conventions and year fraction methods which allows moving from dates intervals to real numbers.
 
 ## Installation
 
