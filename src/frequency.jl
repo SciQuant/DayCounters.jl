@@ -1,84 +1,84 @@
 # supertype
 abstract type Frequency end
 
-@doc raw"""
+"""
     NoFrequency
 
 Null frequency.
 """
 struct NoFrequency <: Frequency end
 
-@doc raw"""
+"""
     Once
 
 Only once, e.g., a zero-coupon.
 """
 struct Once <: Frequency end
 
-@doc raw"""
+"""
     Annual
 
 Once a year.
 """
 struct Annual <: Frequency end
 
-@doc raw"""
+"""
     Semiannual
 
 Twice a year.
 """
 struct Semiannual <: Frequency end
 
-@doc raw"""
+"""
     EveryFourthMonth
 
 Every four months.
 """
 struct EveryFourthMonth <: Frequency end
 
-@doc raw"""
+"""
     Quarterly
 
 Every three months.
 """
 struct Quarterly <: Frequency end
 
-@doc raw"""
+"""
     Bimonthly
 
 Every two months.
 """
 struct Bimonthly <: Frequency end
 
-@doc raw"""
+"""
     Monthly
 
 Once a month.
 """
 struct Monthly <: Frequency end
 
-@doc raw"""
+"""
     EveryFourthWeek
 
 Every four weeks.
 """
 struct EveryFourthWeek <: Frequency end
 
-@doc raw"""
+"""
     Biweekly
 
 Every two weeks.
 """
 struct Biweekly <: Frequency end
 
-@doc raw"""
+"""
     Weekly
 
 Once a week.
 """
 struct Weekly <: Frequency end
 
-@doc raw"""
+"""
     Daily
 
 Once a day.
@@ -86,7 +86,7 @@ Once a day.
 struct Daily <: Frequency end
 
 # FIXME: yo a esta la llamaria UnknowFrequency
-@doc raw"""
+"""
     OtherFrequency
 
 Some other unknown frequency.

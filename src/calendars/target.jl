@@ -1,5 +1,5 @@
 
-@doc raw"""
+"""
     TARGETCalendar
 
 TARGET calendar (European Central Bank).

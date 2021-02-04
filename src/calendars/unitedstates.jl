@@ -1,5 +1,5 @@
 
-@doc raw"""
+"""
     UnitedStatesCalendar
 
 Supertype for United States calendars.
@@ -8,28 +8,28 @@ struct UnitedStatesCalendar <: WesternCalendar
     t::MarketCalendar
 end
 
-@doc raw"""
+"""
     Settlement
 
 Calendar including public holidays (see: http://www.opm.gov/fedhol/).
 """
 struct Settlement <: MarketCalendar end
 
-@doc raw"""
+"""
     NYSE
 
 Stock exchange calendar (data from http://www.nyse.com).
 """
 struct NYSE <: MarketCalendar end
 
-@doc raw"""
+"""
     GovernmentBond
 
 Government bond market calendar (data from http://www.bondmarkets.com).
 """
 struct GovernmentBond <: MarketCalendar end
 
-@doc raw"""
+"""
     NERC
 
 North American Energy Reliability Council calendar (data from
@@ -37,14 +37,14 @@ http://www.nerc.com/~oc/offpeaks.html):
 """
 struct NERC <: MarketCalendar end
 
-@doc raw"""
+"""
     LiborImpact
 
 to be done.
 """
 struct LiborImpact <: MarketCalendar end
 
-@doc raw"""
+"""
     FederalReserve
 
 to be done.

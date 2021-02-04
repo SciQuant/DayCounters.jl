@@ -1,5 +1,5 @@
 
-@doc raw"""
+"""
     ArgentinaCalendar
 
 Buenos Aires, Argentina, stock exchange calendar.

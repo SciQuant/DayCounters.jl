@@ -15,7 +15,7 @@ include("brazil.jl")
 include("unitedstates.jl")
 include("target.jl")
 
-@doc raw"""
+"""
     isbusinessday(dt::Date, calendar::BusinessCalendar) -> Bool
 
 Provides methods for determining whether a date `dt` is or not a business day. A `calendar`,
@@ -24,7 +24,7 @@ be provided.
 """
 function isbusinessday end
 
-@doc raw"""
+"""
     isholiday(dt::Date, calendar::BusinessCalendar) -> Bool
 
 Provides methods for determining whether a date `dt` is or not a holiday. A `calendar`,
@@ -33,7 +33,7 @@ be provided.
 """
 isholiday(dt::Date, calendar::BusinessCalendar) = !isbusinessday(dt, calendar)
 
-@doc raw"""
+"""
     BusinessDayConvention
 
 Supertype for elements that provide algorithms used to adjust a date in case it is not a
@@ -41,14 +41,14 @@ valid business day.
 """
 abstract type BusinessDayConvention end
 
-@doc raw"""
+"""
     Unadjusted
 
 A [`BusinessDayConvention`](@ref) subtype that provides no date adjustment.
 """
 struct Unadjusted <: BusinessDayConvention end
 
-@doc raw"""
+"""
     Following
 
 A [`BusinessDayConvention`](@ref) subtype that chooses the first business day after the
@@ -56,7 +56,7 @@ given holiday.
 """
 struct Following <: BusinessDayConvention end
 
-@doc raw"""
+"""
     ModifiedFollowing
 
 A [`BusinessDayConvention`](@ref) subtype that chooses the first business day after the
@@ -65,7 +65,7 @@ business day before the holiday.
 """
 struct ModifiedFollowing <: BusinessDayConvention end
 
-@doc raw"""
+"""
     Preceding
 
 A [`BusinessDayConvention`](@ref) subtype that chooses the first business day before the
@@ -73,7 +73,7 @@ given holiday.
 """
 struct Preceding <: BusinessDayConvention end
 
-@doc raw"""
+"""
     ModifiedPreceding
 
 A [`BusinessDayConvention`](@ref) subtype that chooses the first business day before the
@@ -82,7 +82,7 @@ business day after the holiday.
 """
 struct ModifiedPreceding <: BusinessDayConvention end
 
-@doc raw"""
+"""
     HalfMonthModifiedFollowing
 
 A [`BusinessDayConvention`](@ref) subtype that chooses the first business day after the
@@ -91,7 +91,7 @@ case choose the first business day before the holiday.
 """
 struct HalfMonthModifiedFollowing <: BusinessDayConvention end
 
-@doc raw"""
+"""
     Nearest
 
 A [`BusinessDayConvention`](@ref) subtype that chooses the nearest business day to the given
@@ -100,7 +100,7 @@ following business day.
 """
 struct Nearest <: BusinessDayConvention end
 
-@doc raw"""
+"""
     adjustdate(dt::Date, calendar::BusinessCalendar, [convention::BusinessDayConvention = Following()]) -> Date
 
 Adjusts a non-business day to the appropriate near business day with respect to the given
@@ -187,7 +187,7 @@ function adjustdate(dt::Date, calendar::BusinessCalendar, ::Nearest)
     return isholiday(dt1, calendar) ? dt2 : dt1
 end
 
-@doc raw"""
+"""
     advance(dt::Date, step::DatePeriod, calendar::BusinessCalendar, [convention::BusinessDayConvention = Following()])
 
 Advances the given `date`, `step` number of days and returns the result. `step` can be
@@ -221,7 +221,7 @@ julia> advance(dt, BusinessDay(0), ArgentinaCalendar())
 function advance end
 
 # default
-advance(dt::Date, step::Period, calendar::BusinessCalendar, convention::BusinessDayConvention = Following()) =
+advance(dt::Date, step::Period, calendar::BusinessCalendar, convention::BusinessDayConvention=Following()) =
     advance(dt, step, calendar, convention)
 
 function advance(

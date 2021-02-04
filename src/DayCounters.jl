@@ -1,9 +1,6 @@
 module DayCounters
 
 using Dates
-# import Dates: periodisless, value # est, asi es mejor no? y remuevo los Dates. El unico
-# problema es que si importo value, la voy a cagar porque la estoy definiendo en frequency.jl
-# y no quiero
 
 include("frequency.jl")
 include("period.jl")

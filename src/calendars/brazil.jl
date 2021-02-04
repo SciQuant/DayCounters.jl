@@ -1,19 +1,19 @@
 
-@doc raw"""
+"""
     BrazilCalendar
 
 Brazilian calendar.
 """
 abstract type BrazilCalendar <: WesternCalendar end
 
-@doc raw"""
+"""
     BrazilSettlement
 
 Calendar including public holidays.
 """
 struct BrazilSettlement <: BrazilCalendar end
 
-@doc raw"""
+"""
     BrazilExchange
 
 Holidays for the Bovespa stock exchange.

@@ -1,5 +1,5 @@
 
-@doc raw"""
+"""
     DayCountConvention
 
 Supertype for elements that provide methods for determining the length of a time period
@@ -9,21 +9,23 @@ abstract type DayCountConvention end
 
 # esta no se si exportarla y documentarla, podria aclarar que es una funcion auxiliar
 # utilizada para el calculo de la year fraction
-@doc raw"""
+"""
     daysperyear(::DayCountConvention) -> Int64
 
-Returns the number of days in a year considering the corresponding [`DayCountConvention`](@ref).
+Returns the number of days in a year considering the corresponding
+[`DayCountConvention`](@ref).
 """
 function daysperyear end
 
-@doc raw"""
+"""
     daycount(dt1::Date, dt2::Date, convention::DayCountConvention) -> Int64
 
-Returns the number of days between two dates considering the corresponding [`DayCountConvention`](@ref).
+Returns the number of days between two dates considering the corresponding
+[`DayCountConvention`](@ref).
 """
 function daycount end
 
-@doc raw"""
+"""
     yearfraction(dt1::Date, dt2::Date, convention::DayCountConvention) -> Real
 
 Returns the period between two dates as a fraction of year considering the corresponding

@@ -9,7 +9,7 @@
 # dispatch de Tenors::Vector{<:DatePeriod}, pero por ahi conviene usar sus convenciones de
 # Stubs porque puede que sean conocidas en la industria.
 
-struct Schedule{C <: Union{BusinessCalendar,Nothing},B <: Union{BusinessDayConvention,Nothing}}
+struct Schedule{C<:Union{BusinessCalendar,Nothing},B<:Union{BusinessDayConvention,Nothing}}
     dates::Vector{Date}
     calendar::C
     convention::B
@@ -22,7 +22,6 @@ function Schedule(
     calendar::BusinessCalendar,
     convention::BusinessDayConvention
 )
-
     adjustedfrom = adjustdate(from, calendar, convention)
     adjustedto = adjustdate(to, calendar, convention)
 
